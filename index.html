@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="MenuApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Libraries -->
+	<script src="lib/jquery-3.1.0.min.js"></script>
+	<script src="lib/angular.min.js"></script>
+	<script src="lib/angular-ui-router.min.js"></script>
+
+	<!-- Modules -->
+	<script src="src/menuapp/menuapp.module.js"></script>
+
+	<!-- module artifacts -->
+	<script src="src/menuapp/menuapp.items.component.js"></script>
+	<script src="src/menuapp/menuapp.ItemDetail.controller.js"></script>
+	<script src="src/menuapp/menuapp.categories.component.js"></script>
+	<script src="src/menuapp/menuapp.service.js"></script>	
+	<script src="src/menuapp/menuapp.constant.js"></script>	
+	
+
+	<title> SPA - Assignment 4</title>
+</head>
+
+
+<body>
+	<h1> Welcome to our Restaurant </h1>
+
+	<ui-view></ui-view>
+
+</body>
+</html>
+
+
