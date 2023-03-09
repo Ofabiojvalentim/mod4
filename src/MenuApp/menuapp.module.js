@@ -28,7 +28,15 @@ function MenuAppConfig($stateProvider,$urlRouterProvider){
 	})
 	.state('items',{
 		url:'/items/{itemShortName}',
-		templateUrl:'/template/items.html',
+		templateUrl:'/template/items.html', 
+		controller: 'ItensController as itenscontroler',
+		resolve: {
+			items: ['MenuService',function(MenuService){
+				return MenuService.getItemsForCategory($stateParams.itemShortName).then(function(items){
+					return items;
+				});
+			}]
+		}
 
 	});
 
