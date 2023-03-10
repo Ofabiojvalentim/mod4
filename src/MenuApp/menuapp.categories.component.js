@@ -4,7 +4,7 @@
 
 angular.module('MenuApp')
 .component('listCategories', {
-	templateUrl: 'template/menuappCategoriesTemplate.html',
+	templateUrl: 'template/menuapp.list-categories.html',
 	controller: MenuAppComponentController
 });
 
@@ -27,18 +27,6 @@ var $ctrl = this;
 		console.log("error on promise");
 	});
 
-
-	$ctrl.MenuItems = function(shortName){
-
-		
-		var promise = MenuService.getItemsForCategory(shortName);
-
-		promise.then(function (response){
-			console.log(response.data);
-		}).catch(function(error){
-			console.log(error);
-		})
-	};
 };
 
 })();

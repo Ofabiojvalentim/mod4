@@ -26,22 +26,24 @@ function MenuAppConfig($stateProvider,$urlRouterProvider){
 
 
 	})
-	.state('items',{
-		url:'/items/{itemShortName}',
-		templateUrl:'/template/items.html', 
-		controller: 'ItensController as itenscontroler',
-		resolve: {
-			items: ['MenuService',function(MenuService){
+	.state('item',{
+		url:'/categories/item/{itemShortName}',
+		templateUrl:'/template/items.html',
+		controller: 'itemStatemController as itemdetail',
+		resolve : {
+			item: ['$stateParams','MenuService',function($stateParams,MenuService){
 				return MenuService.getItemsForCategory($stateParams.itemShortName).then(function(items){
-					return items;
+					return items.data;
 				});
 			}]
 		}
-
+		
 	});
 
 
 } //EndOf MenuAppConfig
+
+
 
 	
 })();
