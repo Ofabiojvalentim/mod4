@@ -17,18 +17,18 @@ function MenuAppConfig($stateProvider,$urlRouterProvider){
 	//set up ui states
 	$stateProvider.state('home',{
 		url: '/',
-		templateUrl: '/template/home.html'
+		templateUrl: 'template/home.html'
 
 	})
 	.state('categories',{
 		url: '/categories',
-		templateUrl: '/template/categories.html',
+		templateUrl: 'template/categories.html',
 
 
 	})
 	.state('item',{
 		url:'/categories/item/{itemShortName}',
-		templateUrl:'/template/items.html',
+		templateUrl:'template/items.html',
 		controller: 'itemStatemController as itemdetail',
 		resolve : {
 			item: ['$stateParams','MenuService',function($stateParams,MenuService){
