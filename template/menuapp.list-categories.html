@@ -1,0 +1,11 @@
+<div>
+	<a ui-sref="home"> Back to Home </a>
+	<p> {{ $ctrl.controller_name }} </p>
+		<ol>
+			<li ng-repeat="category in $ctrl.categories"> 
+				<a href="" ng-click="$ctrl.MenuItems(category.short_name);" 
+					ui-sref="item({itemShortName: category.short_name})" > {{ category.name }}
+				</a> 
+			</li>
+		</ol>
+</div>

@@ -1,8 +1,21 @@
 <a ui-sref=categories> Back to Categories </a>
 
 <br>
-<div> 
 
-	<list-items> </list-items>
+<div> 
+	 
+	 <ul>
+	 	<li ng-repeat="item in itemdetail.arrayvalue.menu_items"> 
+	 	ITEM NAME: {{ item.name }} <br>
+	 	DESCRIPTION: {{ item.description }} <br>
+	 	.
+
+	 	</li>
+	 </ul>
+
+	<!-- <list-items> </list-items> -->
+
+	
+	
 	
 </div>
